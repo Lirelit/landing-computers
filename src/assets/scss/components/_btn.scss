@@ -1,0 +1,34 @@
+.btn {
+    display: inline-block;
+    align-items: center;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    appearance: none;
+    cursor: pointer;
+    
+    @include breakpoint(sm) {
+    padding: 8px 16px;
+    font-size: 14px;
+    }
+}
+
+.btn_main {
+    background-image: var(--color-gr-main);
+    
+}
+
+.btn_secondary{
+    background-image: var(--color-gr-secondary);
+}
+
+.btn_empty{
+    background-color: transparent;
+    border: 1px white solid;
+}
+

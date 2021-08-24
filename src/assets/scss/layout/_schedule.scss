@@ -1,0 +1,144 @@
+.schedule {
+    padding-top: 80px;
+    padding-bottom: 130px;
+    background-color: var(--color-theme);
+
+    @include breakpoint(md) {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+        padding-left: 0;
+        
+                @include breakpoint(sm) {
+                    padding-left: 0;
+                }
+
+        &::before {
+            position: static;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 75px;
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 80px;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.5;
+        line-height: 1.6;
+    }
+
+    &__content {
+        position: relative;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        
+                @include breakpoint(sm) {
+                    max-width: 400px;
+                }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+            background-repeat: no-repeat;
+            right: 50%;
+            height: 100%;
+            width: 5px;
+            z-index: 2;
+            @include breakpoint(sm) {
+                right: auto;
+            }
+
+        }
+
+        :nth-child(odd).schedule__card {
+            align-items: flex-end;
+            text-align: end;
+            padding-left: 0;
+            padding-right: 350px;
+
+            @include breakpoint(sm) {
+                padding-right: 0;
+                padding-left: 75px;
+                align-items: flex-start;
+                text-align: start;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 350px;
+        margin-bottom: 5px;
+        
+                @include breakpoint(sm) {
+                    padding-left: 75px;
+                    margin-bottom: 20px;
+                }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: #fff;
+            opacity: 0.3;
+            width: 40px;
+            height: 1px;
+            top: 50%;
+            right: 50%;
+            z-index: 1;
+
+            @include breakpoint(sm) {
+                left: 0;
+            }
+
+        }
+
+        &:nth-child(even) {
+            &::after {
+                left: 50%;
+
+                @include breakpoint(sm) {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__date {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #FFFFFF;
+        opacity: 0.5;
+
+        @include breakpoint(sm) {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    &__desc {
+        margin: 0;
+        position: relative;
+        font-size: 18px;
+        color: #FFFFFF;
+        line-height: 1.6;
+    }
+}

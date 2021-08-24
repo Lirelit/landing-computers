@@ -1,0 +1,63 @@
+.s-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 48px;
+    color: #fff;
+
+    @include breakpoint(sm) {
+        font-size: 26px;
+    }
+
+    &_icon {
+        padding-left: 110px;
+        position: relative;
+
+        @include breakpoint(sm) {
+            padding-left: 80px;
+            }
+
+        &::before {
+            content: '';
+            background-image: url(../img/common/ellipse.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: -15%;
+            left: 0;
+
+            @include breakpoint(sm) {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        
+    }
+
+    &_icon-45deg {
+        position: relative;
+
+        &::before {
+            transform: rotate(45deg);
+        }
+    }
+
+    &_icon-135deg {
+        position: relative;
+
+        &::before {
+            transform: rotate(135deg);
+        }
+    }
+
+    &_icon-180deg {
+        position: relative;
+
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+
+}

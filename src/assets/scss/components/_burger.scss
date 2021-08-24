@@ -1,0 +1,37 @@
+.burger {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 10;
+    @include breakpoint(md) {
+        display: flex;
+    }
+
+    &_closed{
+        .burger__line {
+            
+            &:nth-child(1){
+                transform: translate(0,11px)  rotate(45deg);
+            }
+            &:nth-child(2){
+                display: none;
+            }
+            &:nth-child(3){
+                transform: translate(0,-13px) rotate(-45deg);
+            }
+        }
+    }
+    
+    &__line{
+
+        height: 2px;
+        background: #fff;
+        border-radius: 50px;
+        transition: $fast;
+    }
+}

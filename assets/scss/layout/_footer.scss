@@ -1,0 +1,19 @@
+.footer {
+    background: rgb(179, 177, 117);
+    font-size: 24px;
+    color: rgb(223, 221, 148);
+    transition: 0.3s;
+    appearance: none;
+  } 
+
+  @media (max-width:920px){
+    .footer {
+        background: rgb(99, 194, 218);
+  }
+}
+
+@media (max-width:560px){
+    .footer {
+        background: rgb(218, 99, 182);
+  }
+}

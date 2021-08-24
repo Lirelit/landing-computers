@@ -1,0 +1,28 @@
+html{
+    font-family: 'Roboto';
+    font-size: 16px;
+    
+}
+
+body {
+    &.content-hidden{
+        overflow: hidden;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+

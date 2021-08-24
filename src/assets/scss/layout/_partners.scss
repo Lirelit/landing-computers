@@ -1,0 +1,38 @@
+.partners {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    background-color: var(--color-theme);
+
+    @include breakpoint(md) {
+        padding-top: 45px;
+        padding-bottom: 70px;
+    }
+
+    &__title {
+        margin-bottom: 90px;
+    }
+
+    &__container{
+        @include breakpoint(sm) {
+            margin-left: calc(var(--mob-padding) * -1);
+            margin-right: calc(var(--mob-padding) * -1);
+            overflow: hidden;
+        }
+    }
+
+    &__wrapper { 
+        overflow: hidden;
+        margin: -2px; 
+    }
+    
+    &__card {
+        padding: 30px 65px;
+        background-color: var(--color-theme);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+    &__card-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
